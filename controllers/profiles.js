@@ -32,26 +32,28 @@ function edit(req, res){
 
 function update(req, res) {
   Profile.findById(req.params.id)
-  
   .then(profile => {
     if (profile.equals(req.user.profile._id)) {
-      profile(req.body)
-      profile.updateOne(req.body, {new: true})
-      profile.save()
-      .then(()=> {
-        res.redirect(`/profiles/${profile._id}`)
-      })
-    } else {
-      throw new Error ('NOT AUTHORIZED')
+    for (const key in req.body) {
+      profile[key]=req.body[key]
     }
-    console.log(profile)
-  })
-  .catch(err => {
-    console.log(err)
-    res.redirect(`/`)
-  })
+    console.log("**********",profile,"**********")
+    profile.save().then(savedProfile => {
+      res.redirect(`/profiles/${profile._id}`)
+    });
+  } else {
+    res.redirect('/')
+  }
+})
+.catch(err => {
+  console.log(err)
+  res.redirect(`/`)
+})
 }
-
+  //   .then(()=> {
+  //     res.redirect(`/profiles/${profile._id}`)
+  //   })
+  
 export{
   show,
   edit,

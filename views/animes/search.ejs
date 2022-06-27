@@ -6,7 +6,10 @@
   <% if (search) { %>
     <h2>You searched for <%= search %></h2>
   <% } %>
-  <h4></h4>
+  <% results.data.forEach(result => { %>
+    <h2><%= result.attributes.slug %></h2>
+    <img src="<%= result.coverImage.meta%>" alt="">
+  <% }) %>
 </main>
 
 <%- include('../partials/footer') %>
