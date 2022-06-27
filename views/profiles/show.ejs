@@ -11,11 +11,12 @@
     </div>
     <h1><%=profile.name%></h1>
     <% } %>
-    <form action="/profiles/<%= profile._id %>/edit" method="get">
-      <h3><%= user.profile.favoriteAnime %></h3>
-      <h3><%= user.profile.location %></h3>
-      <h3><%= user.profile.aboutMe %></h3>
-      <button type="submit">Edit</button>
-    </form>
+
+      <form action="/profiles/<%= profile._id %>/edit" method="get">
+        <h3><%= profile.favoriteAnime %></h3>
+        <h3><%= profile.location %></h3>
+        <h3><%= profile.aboutMe %></h3>
+        <button type="submit">Edit</button>
+      </form>
 </main>
 <%- include('../partials/footer') %>

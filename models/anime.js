@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const Schema = mongosoe.Schema
+const Schema = mongoose.Schema
 
 const animeSchema = new Schema({
   name: String,
@@ -11,3 +11,6 @@ const animeSchema = new Schema({
 })
 
 const Anime = mongoose.model("Anime", animeSchema)
+export{
+  Anime
+}

@@ -32,8 +32,10 @@ function edit(req, res){
 
 function update(req, res) {
   Profile.findById(req.params.id)
+  
   .then(profile => {
     if (profile.equals(req.user.profile._id)) {
+      profile(req.body)
       profile.updateOne(req.body, {new: true})
       profile.save()
       .then(()=> {
@@ -42,6 +44,7 @@ function update(req, res) {
     } else {
       throw new Error ('NOT AUTHORIZED')
     }
+    console.log(profile)
   })
   .catch(err => {
     console.log(err)

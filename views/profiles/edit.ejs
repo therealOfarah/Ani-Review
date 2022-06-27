@@ -12,15 +12,15 @@
     <form action="/profiles/<%= profile._id %>?_method=PUT" method="POST">
       <label>
         Favorite Anime:
-        <input type="text" name="favoriteAnime">
+        <input type="text" name="favoriteAnime" value="<%= profile.favoriteAnime %>">
       </label>
       <label>
         About Me:
-        <input type="text" name="aboutme">
+        <input type="text" name="aboutMe" value="<%= profile.aboutMe %>">
       </label>
       <label>
         Location:
-        <input type="text" name="location">
+        <input type="text" name="location" value="<%= profile.location %>">
       </label>
       <button type="submit">Save</button>
     </form>
