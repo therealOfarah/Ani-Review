@@ -1,7 +1,7 @@
 import { Anime } from "../models/anime.js";
 import axios from "axios";
 function animeSearch(req, res) {
-  axios.get(`https://kitsu.io/api/edge/anime/`)
+  axios.get(`https://kitsu.io/api/edge/anime`)
   .then(response => {
     // console.log(response.data)
     res.render('animes/search', {
