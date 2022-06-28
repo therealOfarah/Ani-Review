@@ -55,7 +55,7 @@ function addAnime(req,res){
   Profile.findById(req.params.id)
   .populate('anime')
   .then(profile =>{
-    res.redirect(`/profile/${profile._id}`)
+    res.redirect(`/profiles`)
   })
 }
 export{  

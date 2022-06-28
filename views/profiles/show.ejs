@@ -8,31 +8,19 @@
     alt="<%= profile.name %> avatar"
     />
   </div> -->
-  <div class="row gutters-sm">
-    <div class="col-md-4 mb-3">
-      <div class="card">
-        <div class="card-body">
-          <div class="d-flex flex-column align-items-center text-center">
-            <img src="<%=profile.avatar %>" alt="Admin" class="rounded-circle" width="150">
-            <div class="mt-3">
-              <h4>John Doe</h4>
-              <p class="text-secondary mb-1"><%=profile.name %></p>
-              <p class="text-muted font-size-sm"><%=profile.favoriteAnime %></p>
-              <p class="text-muted font-size-sm"><%=profile.location %></p>
-              <p class="text-muted font-size-sm"><%=profile.aboutMe %></p>
-              
-              <button class="btn btn-primary">Follow</button>
-              <button class="btn btn-outline-primary">Message</button>
-            </div>
-          </div>
-        </div>
-      </div>
+  <div class="card" style="width: 18rem;">
+    <img src="<%=profile.avatar %>" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h3 class="card-title"><%= profile.name %> </h3>
+      <h5 class="card-title"><%= profile.location%> </h5>
+      <h5 class="card-title"><%= profile.favoriteAnime%></h5>
+      <a href="/profiles" class="btn btn-primary">Everyone</a>
       <% if (user?.profile.avatar) { %>
         <form action="/profiles/<%= profile._id %>/edit" method="get">
-        
-          <h3></h3>
-          <button type="submit">Edit</button>
+          <a href="/profiles/<%= profile._id %>/edit" class="btn btn-primary">Edit</a>
         </form>
         <% } %>
-</main>
+    </div>
+    </div>
+  </main>
 <%- include('../partials/footer') %>

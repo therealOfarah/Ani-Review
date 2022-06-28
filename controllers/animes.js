@@ -2,19 +2,18 @@ import { Anime } from "../models/anime.js";
 import axios from "axios";
 
 function index(req,res){
-  Anime.find({})
   axios.get(`https://kitsu.io/api/edge/anime`)
-  .then(animes =>{
+  .then(response =>{
     res.render('animes/index',{
-      animes: ,
-      title:"All Anime"
+      title:"All Anime",
+      results: response.data
     })
   })
 }
 
 
 function animeSearch(req, res) {
-  axios.get(`https://kitsu.io/api/edge/anime`)
+  axios.get(`https://kitsu.io/api/edge/anime?filter`)
   .then(response => {
     // console.log(response.data)
     res.render('animes/search', {
@@ -25,11 +24,15 @@ function animeSearch(req, res) {
   })
 }
 function show(req,res){
-  console.log("infoiwnqofinewrfnqoeinfqoenfqoenfqowen")
+  
 }
 
+function hottestAnime(req,res){
+  
+}
 export{
   animeSearch,
   show,
-  index
+  index,
+  hottestAnime
 }

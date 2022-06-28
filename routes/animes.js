@@ -4,6 +4,7 @@ const router = Router()
 
 router.get('/',animeCtrl.index)
 router.get('/search',animeCtrl.animeSearch)
+router.get('/hottestanime',animeCtrl.hottestAnime)
 router.get('/:id',animeCtrl.show)
 export {
   router
