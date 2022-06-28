@@ -3,11 +3,11 @@
 
 <main>
   <div>
-    <img
+    <!-- <img
     src="<%=profile.avatar %>"
     alt="<%= profile.name %> avatar"
     />
-  </div>
+  </div> -->
   <div class="row gutters-sm">
     <div class="col-md-4 mb-3">
       <div class="card">
@@ -20,18 +20,19 @@
               <p class="text-muted font-size-sm"><%=profile.favoriteAnime %></p>
               <p class="text-muted font-size-sm"><%=profile.location %></p>
               <p class="text-muted font-size-sm"><%=profile.aboutMe %></p>
+              
               <button class="btn btn-primary">Follow</button>
               <button class="btn btn-outline-primary">Message</button>
             </div>
           </div>
         </div>
       </div>
-  <% if (user?.profile.avatar) { %>
-    <form action="/profiles/<%= profile._id %>/edit" method="get">
-    
-      <h3></h3>
-      <button type="submit">Edit</button>
-    </form>
-    <% } %>
+      <% if (user?.profile.avatar) { %>
+        <form action="/profiles/<%= profile._id %>/edit" method="get">
+        
+          <h3></h3>
+          <button type="submit">Edit</button>
+        </form>
+        <% } %>
 </main>
 <%- include('../partials/footer') %>

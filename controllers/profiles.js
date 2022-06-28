@@ -12,6 +12,7 @@ function index(req, res) {
 
 function show (req,res){
   Profile.findById(req.params.id)
+  .populate('anime')
   .then(profile =>{
     res.render('profiles/show',{
       profile,
@@ -50,13 +51,17 @@ function update(req, res) {
   res.redirect(`/`)
 })
 }
-  //   .then(()=> {
-  //     res.redirect(`/profiles/${profile._id}`)
-  //   })
-  
-export{
+function addAnime(req,res){
+  Profile.findById(req.params.id)
+  .populate('anime')
+  .then(profile =>{
+    res.redirect(`/profile/${profile._id}`)
+  })
+}
+export{  
   show,
   edit,
   update,
-  index
+  index,
+  addAnime
 }

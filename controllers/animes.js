@@ -1,5 +1,18 @@
 import { Anime } from "../models/anime.js";
 import axios from "axios";
+
+function index(req,res){
+  Anime.find({})
+  axios.get(`https://kitsu.io/api/edge/anime`)
+  .then(animes =>{
+    res.render('animes/index',{
+      animes: ,
+      title:"All Anime"
+    })
+  })
+}
+
+
 function animeSearch(req, res) {
   axios.get(`https://kitsu.io/api/edge/anime`)
   .then(response => {
@@ -7,7 +20,7 @@ function animeSearch(req, res) {
     res.render('animes/search', {
       title: 'Search Results',
       search: req.body.search ? req.body.search : null,
-      results: response.data
+      results: response.data,
     })
   })
 }
@@ -17,5 +30,6 @@ function show(req,res){
 
 export{
   animeSearch,
-  show
+  show,
+  index
 }

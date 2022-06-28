@@ -1,23 +1,29 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
 
-<main>
-  <h1>Search Results</h1>
-  <% if (search) { %>
-    <h2>You searched for <%= search %></h2>
-  <% } %>
-  <% results.data.forEach(result => { %>
-
-    <div class="card" style="width: 18rem;">
-      <img src="<%= result.attributes.posterImage.medium%>" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title"><%= result.attributes.slug %></h5>
-        <p class="card-text"><%= result.attributes.startDate %> <-> <%= result.attributes.endDate %></p>
-        <a href="/animes/<%= anime._id %>" class="btn btn-primary">Check it out</a>
-      </div>
-    </div>
-    
-  <% }) %>
-</main>
+  <main>
+      <h1>Search Results</h1>
+      <% if (search) { %>
+        <h2>You searched for <%= search %>
+        </h2>
+        <% } %>
+      <% results.data.forEach(result=> { %>
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <form action="/profiles/addAnime%>" method="post">
+                <img name="image" src="<%= result.attributes.posterImage.small%>" class="card-img-top">
+                <input hidden type="text" name="name" id="" value="<%= result.attributes.slug %>">
+                </h5>
+                <input hidden type="text" name="start" id="" value="<%= result.attributes.startDate %>">
+                <input hidden type="text" name="end" id="" value="<%= result.attributes.endDate %>">
+                <button type="submit">Add to Anime List</button>
+              </form>
+              <a href="/animes">
+                <button>Leave a comment</button>
+              </a>
+            </div>
+          </div>
+      <% }) %>
+  </main>
 
 <%- include('../partials/footer') %>
