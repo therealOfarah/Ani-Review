@@ -12,15 +12,15 @@
             </h5>
             <input hidden type="text" name="start" id="" value="<%= result.attributes.startDate %>">
             <input hidden type="text" name="end" id="" value="<%= result.attributes.endDate %>">
-            <a href="">
-              <button type="submit">Add to Anime List</button>
+            <button type="submit">Add to Anime List</button>
+            <a href="/animes">
+              <button>Leave a comment</button>
             </a>
-          <a href="/animes">
-            <button>Leave a comment</button>
-          </a>
+          </div>
         </div>
-      </div>
-  <% }) %>
+        <% }) %>
+        <a href="">
+      </a>
 </main>
 
 <%- include('../partials/footer') %>
