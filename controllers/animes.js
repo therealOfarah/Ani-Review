@@ -11,7 +11,11 @@ function animeSearch(req, res) {
     })
   })
 }
+function show(req,res){
+  console.log("infoiwnqofinewrfnqoeinfqoenfqoenfqowen")
+}
 
 export{
-  animeSearch
+  animeSearch,
+  show
 }

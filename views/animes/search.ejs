@@ -7,8 +7,16 @@
     <h2>You searched for <%= search %></h2>
   <% } %>
   <% results.data.forEach(result => { %>
-    <h2><%= result.attributes.slug %></h2>
-    <img src="<%= result.attributes.posterImage.medium%>" alt="">
+
+    <div class="card" style="width: 18rem;">
+      <img src="<%= result.attributes.posterImage.medium%>" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"><%= result.attributes.slug %></h5>
+        <p class="card-text"><%= result.attributes.startDate %> <-> <%= result.attributes.endDate %></p>
+        <a href="/animes/<%= anime._id %>" class="btn btn-primary">Check it out</a>
+      </div>
+    </div>
+    
   <% }) %>
 </main>
 
