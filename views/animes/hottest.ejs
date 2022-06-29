@@ -2,7 +2,21 @@
 <%- include('../partials/nav') %>
 
 <main>
-  
+    <% results.data.forEach(result=> { %>
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+            <img name="image" src="<%= result.attributes.posterImage.small%>" class="card-img-top">
+            <input hidden type="text" name="name" id="" value="<%= result.attributes.slug %>">
+            </h5>
+            <input hidden type="text" name="start" id="" value="<%= result.attributes.startDate %>">
+            <input hidden type="text" name="end" id="" value="<%= result.attributes.endDate %>">
+            <button type="submit">Add to Anime List</button>
+            <a href="/animes">
+              <button>Leave a comment</button>
+            </a>
+          </div>
+        </div>
+        <% }) %
 </main>
 
 <%- include('../partials/footer') %>

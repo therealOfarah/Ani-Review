@@ -7,7 +7,8 @@ const animeSchema = new Schema({
   description: String,
   start: String,
   end: String,
-  ageRating: String
+  ageRating: String,
+  animeId: Number,
 })
 
 const Anime = mongoose.model("Anime", animeSchema)
