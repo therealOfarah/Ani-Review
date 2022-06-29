@@ -9,7 +9,7 @@ const profileSchema = new mongoose.Schema({
   aboutMe:String,
   location:String,
   favoriteAnime:String,
-  anime: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Anime' }]
+  anime: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Anime' }],
 
 }, {
   timestamps: true

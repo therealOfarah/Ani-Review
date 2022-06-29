@@ -9,18 +9,18 @@
         <h2>You searched for <%= search %>
         </h2>
         <% } %>
-      <% results.data.forEach(result=> { %>
+      <% animeId.data.forEach(anime=> { %>
         <div class="card" style="width: 18rem;">
           <div class="card-body">
             <form action="/profiles/addAnime" method="post">
-                <img name="image" src="<%= result.attributes.posterImage.small%>" class="card-img-top">
-                <h2><%= result.attributes.slug %></h2>
-                <input hidden type="text" name="name" id="" value="<%= result.attributes.slug %>">
-                <input hidden type="text" name="start" id="" value="<%= result.attributes.startDate %>">
-                <input hidden type="text" name="end" id="" value="<%= result.attributes.endDate %>">
+                <img name="image" src="<%= anime.attributes.posterImage.small%>" class="card-img-top">
+                <h2><%= anime.attributes.canonicalTitle%></h2>
+                <input hidden type="text" name="name" id="" value="<%= anime.attributes.canonicalTitle %>">
+                <input hidden type="text" name="start" id="" value="<%= anime.attributes.startDate %>">
+                <input hidden type="text" name="end" id="" value="<%= anime.attributes.endDate %>">
                 <button type="submit">Add to Anime List</button>
               </form>
-              <a href="/animes/<%= result.id %>">
+              <a href="/animes/<%= anime.id %>">
                 <button>Leave a comment</button>
               </a>
             </div>

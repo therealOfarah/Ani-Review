@@ -6,47 +6,69 @@ function index(req,res){
   .then(response =>{
     res.render('animes/index',{
       title:"All Anime",
-      results: response.data
+      animeId: response.data
     })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect(`/`)
   })
 }
 
 
 function animeSearch(req, res) {
-  // console.log("ANIME SEARCH REQ",req)
-  // console.log("ANIME SEARCH REQ ROUTE",req.route)
-  // console.log("ANIME SEARCH REQ QUERY",req.query)
-  // console.log("ANIME SEARCH REQ QUERY SEARCH",req.query.search)
-  // console.log("ANIME SEARCH REQ PATH",req.path)
   axios.get(`https://kitsu.io/api/edge/anime?filter[text]=${req.query.search}`)
   .then(response => {
-  // console.log("ANIME SEARCH RESPONSE",response)
-  // console.log("ANIME SEARCH RESPONSE DATA",response.data)
-
     res.render('animes/search', {
       title: 'Search Results',
       search: req.body.search ? req.body.search : null,
-      results: response.data,
+      animeId: response.data,
     })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect(`/`)
   })
 }
 
 function show(req,res){
   axios.get(`https://kitsu.io/api/edge/anime/${req.params.id}`)
   .then(response =>{
-    Anime.find({ results:response.data})
+    Anime.findOne({ animeId: response.data.id})
     .then((anime =>{
       res.render("animes/show",{
         title: "Leave A comment",
-        results: response.data,
-        anime
+        animeId: response.data,
+        anime,
+        
       })
     }))
   })
+  .catch(err => {
+    console.log(err)
+    res.redirect(`/`)
+  })
 }
+
+
+function hottestAnime(req,res){
+  axios.get(`https://kitsu.io/api/edge/anime?sort=popularityRank`)
+  .then(response =>{
+    res.render('animes/hottest',{
+      title:"All Anime",
+      animeId: response.data
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect(`/`)
+  })
+}
+
 export{
   animeSearch,
-show,
+  show,
   index,
-  // hottestAnime
+  hottestAnime,
+
 }

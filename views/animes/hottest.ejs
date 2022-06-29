@@ -2,21 +2,23 @@
 <%- include('../partials/nav') %>
 
 <main>
-    <% results.data.forEach(result=> { %>
+    <% animeId.data.forEach(anime=> { %>
     <div class="card" style="width: 18rem;">
       <div class="card-body">
-            <img name="image" src="<%= result.attributes.posterImage.small%>" class="card-img-top">
-            <input hidden type="text" name="name" id="" value="<%= result.attributes.slug %>">
+            <img name="image" src="<%= anime.attributes.posterImage.small%>" class="card-img-top">
+            <input hidden type="text" name="name" id="" value="<%= anime.attributes.titles.en %>">
             </h5>
-            <input hidden type="text" name="start" id="" value="<%= result.attributes.startDate %>">
-            <input hidden type="text" name="end" id="" value="<%= result.attributes.endDate %>">
+            <input hidden type="text" name="start" id="" value="<%= anime.attributes.startDate %>">
+            <h5><%= anime.attributes.popularityRank %>. <%= anime.attributes.canonicalTitle %></h5>
             <button type="submit">Add to Anime List</button>
-            <a href="/animes">
-              <button>Leave a comment</button>
-            </a>
+          </form>
+          <a href="/animes/<%= anime.id %>">
+            <button>Leave a comment</button>
+          </a>
+        </div>
           </div>
         </div>
-        <% }) %
+        <% })%>
 </main>
 
 <%- include('../partials/footer') %>

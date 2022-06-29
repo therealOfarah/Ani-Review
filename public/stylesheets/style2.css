@@ -1,0 +1,47 @@
+@media only screen and (max-width: 400px) {
+  main {
+    display: grid;
+    grid-template-columns: repeat(2, 1.5fr);
+    column-gap: 3px;
+    row-gap: 5px;
+    padding-left: 1%;
+
+  }
+}
+@media only screen and (min-width: 400px )and (max-width:600px) {
+  main {
+    display: grid;
+    grid-template-columns: repeat(2, 1.5fr);
+    column-gap: 1px;
+    row-gap: 1px;
+    padding-right: 25px;
+
+  }
+}
+@media only screen and (min-width: 600px )and (max-width:1000px) {
+  main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 1px;
+    row-gap: 1px;
+    padding-right: 25px;
+
+  }
+}
+@media (prefers-color-scheme: dark) {
+    main{
+    color: black;
+    background: lightgrey;
+    padding-left: 1%
+  }
+
+}
+@media (prefers-color-scheme: light) {
+  main{
+  color: black;
+  background: lightblue;
+  padding-left: 1%;
+
+}
+
+}

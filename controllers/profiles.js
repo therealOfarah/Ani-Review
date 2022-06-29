@@ -8,6 +8,10 @@ function index(req, res) {
       title: "Profile"
     })
   })
+  .catch(err => {
+    console.log(err)
+    res.redirect(`/`)
+  })
 }
 
 function show (req,res){
@@ -19,6 +23,10 @@ function show (req,res){
       title:"profile"
     })
   })
+  .catch(err => {
+    console.log(err)
+    res.redirect(`/`)
+  })
 }
 
 function edit(req, res){
@@ -28,6 +36,10 @@ function edit(req, res){
       profile,
       title:"Edit Bio"
     })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect(`/`)
   })
 }
 
@@ -59,6 +71,10 @@ function addAnime(req,res){
     .then(()=>{
       res.redirect(`/profiles/${profile._id}`)
     })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect(`/`)
   })
 }
 export{  
