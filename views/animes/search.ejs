@@ -18,10 +18,10 @@
                 <input hidden type="text" name="name" id="" value="<%= anime.attributes.canonicalTitle %>">
                 <input hidden type="text" name="start" id="" value="<%= anime.attributes.startDate %>">
                 <input hidden type="text" name="end" id="" value="<%= anime.attributes.endDate %>">
-                <button type="submit">Add to Anime List</button>
+                <button type="button" class="btn btn-outline-primary">Add Anime</button>
               </form>
               <a href="/animes/<%= anime.id %>">
-                <button>Leave a comment</button>
+                <button type="button" class="btn btn-outline-secondary">Leave a comment</button>
               </a>
             </div>
           </div>

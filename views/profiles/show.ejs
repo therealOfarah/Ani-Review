@@ -16,12 +16,13 @@
       <h3 class="card-title"><%= profile.name %> </h3>
       <h5 class="card-title"><%= profile.location%> </h5>
       <h5 class="card-title"><%= profile.favoriteAnime%></h5>
-      <h5 class="card-title"><%= anime.name%> </h5>
       <a href="/profiles" class="btn btn-primary">Everyone</a>
-
       <% if (user?.profile.avatar) { %>
         <form action="/profiles/<%= profile._id %>/edit" method="get">
           <a href="/profiles/<%= profile._id %>/edit" class="btn btn-primary">Edit</a>
+        </form>
+        <form action="/profiles/<%= user.profile._id %>?_method=DELETE" method="POST">
+          <button type="submit">Delete</button>
         </form>
         <% } %>
     </div>

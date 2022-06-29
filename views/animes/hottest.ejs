@@ -12,10 +12,10 @@
             </h5>
             <input hidden type="text" name="start" id="" value="<%= anime.attributes.startDate %>">
             <h5><%= anime.attributes.popularityRank %>. <%= anime.attributes.canonicalTitle %></h5>
-            <button type="submit">Add to Anime List</button>
+            <button type="button" class="btn btn-outline-primary">Add Anime</button>
           </form>
           <a href="/animes/<%= anime.id %>">
-            <button>Leave a comment</button>
+            <button type="button" class="btn btn-outline-secondary">Leave a comment</button>
           </a>
         </div>
           </div>

@@ -77,10 +77,17 @@ function addAnime(req,res){
     res.redirect(`/`)
   })
 }
+function deleteInfo(req,res){
+  Profile.findByIdAndDelete(req.user)
+  .then(profile =>{
+    res.redirect('/animes')
+  })
+}
 export{  
   show,
   edit,
   update,
   index,
-  addAnime
+  addAnime,
+  deleteInfo as delete
 }
