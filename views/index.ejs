@@ -1,12 +1,14 @@
 <%- include('./partials/html-head') %>
-<link id="favicon" rel="icon" href="/public/favicon/favicon (1).ico" type="image">
+<link id="favicon" rel="icon" href="/favicon/favicon (1).ico" type="image">
 <%- include('./partials/nav') %>
 
 <main>
-  <h2>Please login with google or feel free to check out some cool anime</h2>
   <% if (user?.profile.avatar) { %>
     <h1>Welcome Back <%= user.profile.name %></h1>
-  <% } %>
+    <%  %>
+    <% }else { %>
+      <h2>Please login with google or feel free to check out some cool anime</h2>
+    <% } %>
 </main>
 
 <%- include('./partials/footer') %>
