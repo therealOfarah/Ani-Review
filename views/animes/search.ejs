@@ -1,33 +1,35 @@
 <%- include('../partials/html-head') %>
-<link rel="stylesheet" href="/stylesheets/style2.css">
-<link rel="stylesheet" href="/stylesheets/AllAnime.css">
-<link id="favicon" rel="icon" href="/favicon/favicon (1).ico" type="image">
-<%- include('../partials/nav') %>
+  <link rel="stylesheet" href="/stylesheets/style2.css">
+  <link rel="stylesheet" href="/stylesheets/AllAnime.css">
+  <link id="favicon" rel="icon" href="/favicon/favicon (1).ico" type="image">
+  <%- include('../partials/nav') %>
 
-  <main>
-    <% if (search) { %>
-      <h1>Search Results</h1>
+    <main>
+      <% if (search) { %>
+        <h1>Search Results</h1>
         <h2>You searched for <%= search %>
         </h2>
         <% } %>
-      <% animeId.data.forEach(anime=> { %>
-        <div class="card" style="width: 18rem;">
-          <div class="card-body">
-            <img name="image" src="<%= anime.attributes.posterImage.small%>" class="card-img-top">
-            <p><strong><%= anime.attributes.canonicalTitle%></strong></p>
-            <form id="new-anime"action="/animes" method="post">
-                <input hidden type="text" name="name" id="" value="<%= anime.attributes.canonicalTitle %>">
-                <input hidden type="text" name="start" id="" value="<%= anime.attributes.startDate %>">
-                <input hidden type="text" name="end" id="" value="<%= anime.attributes.endDate %>">
-               
-              </form>
-              <form action="/animes/new" method="get">
-                <button type="submit" class="btn btn-outline-secondary">Leave a comment</button>
-              </form>
-            </a>
-          </div>
-        </div>
-        <% }) %>
-      </main>
+          <% animeId.data.forEach(anime=> { %>
+            <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                <img name="image" src="<%= anime.attributes.posterImage.small%>" class="card-img-top">
+                <p><strong>
+                    <%= anime.attributes.canonicalTitle%>
+                  </strong></p>
+                <form id="new-anime" action="/animes" method="post">
+                  <input hidden type="text" name="name" id="" value="<%= anime.attributes.canonicalTitle %>">
+                  <input hidden type="text" name="start" id="" value="<%= anime.attributes.startDate %>">
+                  <input hidden type="text" name="end" id="" value="<%= anime.attributes.endDate %>">
 
-<%- include('../partials/footer') %>
+                </form>
+                <form action="/animes/new" method="get">
+                  <button type="submit" class="btn btn-outline-secondary">Read More</button>
+                </form>
+                </a>
+              </div>
+            </div>
+            <% }) %>
+    </main>
+
+    <%- include('../partials/footer') %>

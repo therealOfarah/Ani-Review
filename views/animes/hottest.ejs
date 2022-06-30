@@ -1,26 +1,28 @@
 <%- include('../partials/html-head') %>
-<link rel="stylesheet" href="/stylesheets/hottest.css">
-<link rel="stylesheet" href="/stylesheets/style2.css">
-<link id="favicon" rel="icon" href="/favicon/favicon (1).ico" type="image">
-<%- include('../partials/nav') %>
+  <link rel="stylesheet" href="/stylesheets/hottest.css">
+  <link rel="stylesheet" href="/stylesheets/style2.css">
+  <link id="favicon" rel="icon" href="/favicon/favicon (1).ico" type="image">
+  <%- include('../partials/nav') %>
 
-<main>
-    <% animeId.data.forEach(anime=> { %>
-    <div class="card" style="width: 18rem;">
-      <div class="card-body">
+    <main>
+      <% animeId.data.forEach(anime=> { %>
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
             <img name="image" src="<%= anime.attributes.posterImage.small%>" class="card-img-top">
             <input hidden type="text" name="name" id="" value="<%= anime.attributes.titles.en %>">
             </h5>
             <input hidden type="text" name="start" id="" value="<%= anime.attributes.startDate %>">
-            <h5><%= anime.attributes.popularityRank %>. <%= anime.attributes.canonicalTitle %></h5>
-          </form>
-          <a href="/animes/<%= anime.id %>">
-            <button type="submit" class="btn btn-outline-secondary">Leave a comment</button>
-          </a>
-        </div>
+            <h5>
+              <%= anime.attributes.popularityRank %>. <%= anime.attributes.canonicalTitle %>
+            </h5>
+            </form>
+            <a href="/animes/<%= anime.id %>">
+              <button type="submit" class="btn btn-outline-secondary">Read More</button>
+            </a>
           </div>
         </div>
+        </div>
         <% })%>
-</main>
+    </main>
 
-<%- include('../partials/footer') %>
+    <%- include('../partials/footer') %>

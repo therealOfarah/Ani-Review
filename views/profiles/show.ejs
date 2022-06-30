@@ -1,31 +1,32 @@
 <%- include('../partials/html-head') %>
-<link rel="stylesheet" href="/stylesheets/everyone.css">
-<link id="favicon" rel="icon" href="/favicon/favicon (1).ico" type="image">
-<%- include('../partials/nav') %>
+  <link rel="stylesheet" href="/public/stylesheets/everyone.css">
+  <link id="favicon" rel="icon" href="/favicon/favicon (1).ico" type="image">
+  <%- include('../partials/nav') %>
 
-<main>
-  <div>
-    <!-- <img
-    src="<%=profile.avatar %>"
-    alt="<%= profile.name %> avatar"
-    />
-  </div> -->
-  <div class="card" style="width: 18rem;">
-    <img src="<%=profile.avatar %>" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h3 class="card-title"><%= profile.name %> </h3>
-      <h5 class="card-title"><%= profile.location%> </h5>
-      <h5 class="card-title"><%= profile.favoriteAnime%></h5>
-      <a href="/profiles" class="btn btn-primary">Everyone</a>
-      <% if (user?.profile.avatar) { %>
-        <form action="/profiles/<%= profile._id %>/edit" method="get">
-          <a href="/profiles/<%= profile._id %>/edit" class="btn btn-primary">Edit</a>
-        </form>
-        <form action="/profiles/<%= user.profile._id %>?_method=DELETE" method="POST">
-          <button type="submit">Delete</button>
-        </form>
-        <% } %>
-    </div>
-    </div>
-  </main>
-<%- include('../partials/footer') %>
+    <main>
+      <div>
+        <div class="card" style="width: 18rem;">
+          <img src="<%=profile.avatar %>" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h3 class="card-title">
+              <%= profile.name %>
+            </h3>
+            <h5 class="card-title">
+              <%= profile.location%>
+            </h5>
+            <h5 class="card-title">
+              <%= profile.favoriteAnime%>
+            </h5>
+            <a href="/profiles" class="btn btn-primary">Everyone</a>
+            <% if (user?.profile.avatar) { %>
+              <form action="/profiles/<%= profile._id %>/edit" method="get">
+                <a href="/profiles/<%= profile._id %>/edit" class="btn btn-primary">Edit</a>
+              </form>
+              <form action="/profiles/<%= user.profile._id %>?_method=DELETE" method="POST">
+                <button type="submit">Delete</button>
+              </form>
+              <% } %>
+          </div>
+        </div>
+    </main>
+    <%- include('../partials/footer') %>

@@ -8,16 +8,17 @@ main {
 
 
 @media (prefers-color-scheme: dark) {
-    body{
+  html {
     color: black;
     background: lightgrey;
   }
 
 }
+
 @media (prefers-color-scheme: light) {
-  body{
-  color: black;
-  background: lightblue;
-}
+  html {
+    color: black;
+    background: lightblue;
+  }
 
 }

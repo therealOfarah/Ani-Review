@@ -5,3 +5,28 @@ main {
   row-gap: 5px;
   margin: auto;
 }
+
+@media only screen and (min-width: 400px)and (max-width:600px) {
+  main {
+    display: grid;
+    grid-template-columns: repeat(2, 0fr);
+    column-gap: 1px;
+    row-gap: 1px;
+
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color: black;
+    background: lightgrey;
+  }
+
+}
+
+@media (prefers-color-scheme: light) {
+  html {
+    color: black;
+    background: lightblue;
+  }
+}

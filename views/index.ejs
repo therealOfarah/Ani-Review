@@ -1,14 +1,18 @@
 <%- include('./partials/html-head') %>
-<link id="favicon" rel="icon" href="/favicon/favicon (1).ico" type="image">
-<%- include('./partials/nav') %>
+  <link id="favicon" rel="icon" href="/favicon/favicon (1).ico" type="image">
+  <link rel="stylesheet" href="/stylesheets/home.css">
+  <%- include('./partials/nav') %>
 
-<main>
-  <% if (user?.profile.avatar) { %>
-    <h1>Welcome Back <%= user.profile.name %></h1>
-    <%  %>
-    <% }else { %>
-      <h2>Please login with google or feel free to check out some cool anime</h2>
-    <% } %>
-</main>
+    <main>
+      <section>
+        <% if (user?.profile.avatar) { %>
+          <h1>Welcome Back <%= user.profile.name %>
+          </h1>
+          <% %>
+            <% }else { %>
+              <h2>Please login with google or feel free to check out some cool anime</h2>
+              <% } %>
+      </section>
+    </main>
 
-<%- include('./partials/footer') %>
+    <%- include('./partials/footer') %>

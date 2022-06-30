@@ -8,11 +8,11 @@ const animeSchema = new Schema({
   start: String,
   end: String,
   ageRating: String,
-  reviews:[{ type: mongoose.Schema.Types.ObjectId, ref: 'Review' }],
-  
+  reviews: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Review' }],
+
 })
 
 const Anime = mongoose.model("Anime", animeSchema)
-export{
+export {
   Anime
 }

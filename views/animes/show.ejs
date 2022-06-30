@@ -1,14 +1,18 @@
 <%- include('../partials/html-head') %>
-<link rel="stylesheet" href="/stylesheets/show.css">
-<link rel="stylesheet" href="/stylesheets/style2.css">
-<link id="favicon" rel="icon" href="/favicon/favicon (1).ico" type="image">
-<%- include('../partials/nav') %>
+  <!-- <link rel="stylesheet" href="/stylesheets/show.css"> -->
+  <link rel="stylesheet" href="/stylesheets/style2.css">
+  <link id="favicon" rel="icon" href="/favicon/favicon (1).ico" type="image">
+  <%- include('../partials/nav') %>
 
-<main>
-<img src ="<%=animeId.data.attributes.posterImage.small%>"><br>
-<p class="description"><strong><%=animeId.data.attributes.canonicalTitle%></strong> <br> <%=animeId.data.attributes.description%></p>
-<form id="add-review-form" action="/reviews/<%= anime.id %>?_method=PUT" method="POST">
-    <!-- <label for="content-textarea">Review:</label>
+    <main>
+      <img src="<%=animeId.data.attributes.posterImage.small%>"><br>
+      <p class="description"><strong>
+          <%=animeId.data.attributes.canonicalTitle%>
+        </strong> <br>
+        <%=animeId.data.attributes.description%>
+      </p>
+      <form id="add-review-form" action="/reviews/<%= anime.id %>?_method=PUT" method="POST">
+        <!-- <label for="content-textarea">Review:</label>
     <textarea name="content" id="content-textarea" placeholder="Type Here"requried>
     </textarea>
     <label for="rating-select">Rating:</label>
@@ -20,7 +24,7 @@
       <option value="5" selected>5</option>
     </select>
     <button type="submit" class="btn btn-outline-primary">Add Review</button> -->
-  </form>
-</main>
+      </form>
+    </main>
 
-<%- include('../partials/footer') %>
+    <%- include('../partials/footer') %>

@@ -1,0 +1,30 @@
+/* main section{
+  display: flex;
+  /* justify-content: center;
+  text-align: center;
+  align-items: center;
+  flex-direction: column; */
+*/
+
+/* } */
+* {
+
+  text-align: center;
+
+}
+
+@media (prefers-color-scheme: dark) {
+  main {
+    color: black;
+    background: lightgrey;
+  }
+
+}
+
+@media (prefers-color-scheme: light) {
+  main {
+    color: black;
+    background: lightblue;
+  }
+
+}
