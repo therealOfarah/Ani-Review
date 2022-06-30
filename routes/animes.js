@@ -7,7 +7,7 @@ router.get('/',animeCtrl.index)
 router.get('/search',animeCtrl.animeSearch)
 router.get('/hottestanime',animeCtrl.hottestAnime)
 router.get('/:id',animeCtrl.show)
-// router.get("/new",animeCtrl.newComment)
+router.post("/",animeCtrl.create)
 export {
   router
 }

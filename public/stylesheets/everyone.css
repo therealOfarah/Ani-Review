@@ -1,6 +1,6 @@
 main  .cardContainer{
-  /* grid-template-rows: repeat(2, 0fr);
-  column-gap: 105px;
-  row-gap: 105px; */
-  background-color: grey;
+  display: flex;
+  grid-template-rows: repeat(4, 1fr);
+  column-gap: 45px;
+  row-gap: 20px;
 }

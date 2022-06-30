@@ -30,15 +30,31 @@ function animeSearch(req, res) {
     res.redirect(`/`)
   })
 }
+function create(req,res){
+  axios.get(`https://kitsu.io/api/edge/anime/${req.params.id}`)
+  .then(response =>{
+    Anime.create(response.data)
+    .then(anime=> {
+      anime.push(response.data)
+      anime.save()
+      console.log("***********",anime.id)
+      res.redirect(`/animes/${anime.id}`)
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect(`/`)
+  })
+}
 
 function show(req,res){
   axios.get(`https://kitsu.io/api/edge/anime/${req.params.id}`)
   .then(response =>{
     Anime.find({})
     .then((anime =>{
-      anime.push(response.data)
+      // anime.push(response.data)
       // anime.save()
-      console.log("**********Anime",anime)
+      // console.log("**********Anime",anime)
       res.render("animes/show",{
         title: "Leave A comment",
         animeId: response.data,
@@ -74,6 +90,7 @@ export{
   show,
   index,
   hottestAnime,
+  create
   // newComment
 
 }
