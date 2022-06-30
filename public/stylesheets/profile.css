@@ -42,3 +42,17 @@
   font-size: 24px;
   margin: 0 10px;
 }
+@media (prefers-color-scheme: dark) {
+  html {
+    color: black;
+    background: lightgrey;
+  }
+
+}
+
+@media (prefers-color-scheme: light) {
+  html {
+    color: black;
+    background: lightblue;
+  }
+}

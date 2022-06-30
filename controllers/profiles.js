@@ -62,10 +62,24 @@ function update(req, res) {
       res.redirect(`/`)
     })
 }
-function addAnime(req, res) {
-  Profile.findById(req.user.profile._id)
+
+function deleteReview(req, res) {
+  Profile.findByIdAndDelete(req.profile.review.id)
+    .then(() => {
+      res.redirect('/profiles')
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect("/")
+    })
+}
+
+
+function create(req, res) {
+  Profile.findById(req.params.id)
     .then(profile => {
-      profile.anime.push(req.body)
+      profile.reviews.push(req.body)
+      console.log("******", profile.reviews)
       profile.save()
         .then(() => {
           res.redirect(`/profiles/${profile._id}`)
@@ -73,23 +87,16 @@ function addAnime(req, res) {
     })
     .catch(err => {
       console.log(err)
-      res.redirect(`/`)
+      res.redirect("/")
     })
 }
-function deleteInfo(req, res) {
-  Profile.findByIdAndDelete(req.user.profile._id)
-  .then(()=>{
-    Profile.deleteOne(req.user._id)
-    .then(profile => {
-      res.redirect('/animes')
-    })
-  })
-}
+
 export {
   show,
   edit,
   update,
   index,
   addAnime,
-  deleteInfo as delete
+  deleteReview as delete,
+  create
 }

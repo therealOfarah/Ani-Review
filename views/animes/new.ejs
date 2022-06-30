@@ -4,14 +4,14 @@
   <%- include('../partials/nav') %>
 
     <main>
-      <img src="<%=animeId.data.attributes.posterImage.medium%>">
+      <img src="<% results.data.attributes.posterImage.medium%>">
       <h2>
-        <%=animeId.data.attributes.canonicalTitle%>
+        <% results.data.attributes.canonicalTitle%>
       </h2>
       <h4>
-        <%=animeId.data.attributes.description%>
+        <% results.data.attributes.description%>
       </h4>
-      <form id="add-review-form" action="/animes/<%= animeId.id %>" method="POST">
+      <form id="add-review-form" action="/animes/<%= results.id %>" method="POST">
         <label for="content-textarea">Review:</label>
         <textarea name="content" id="content-textarea" requried></textarea>
         <label for="rating-select">Rating:</label>

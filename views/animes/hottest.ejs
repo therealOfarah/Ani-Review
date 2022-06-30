@@ -5,18 +5,18 @@
   <%- include('../partials/nav') %>
 
     <main>
-      <% animeId.data.forEach(anime=> { %>
+      <% results.data.forEach(result=> { %>
         <div class="card" style="width: 18rem;">
           <div class="card-body">
-            <img name="image" src="<%= anime.attributes.posterImage.small%>" class="card-img-top">
-            <input hidden type="text" name="name" id="" value="<%= anime.attributes.titles.en %>">
+            <img name="image" src="<%= result.attributes.posterImage.small%>" class="card-img-top">
+            <input hidden type="text" name="name" id="" value="<%= result.attributes.titles.en %>">
             </h5>
-            <input hidden type="text" name="start" id="" value="<%= anime.attributes.startDate %>">
+            <input hidden type="text" name="start" id="" value="<%= result.attributes.startDate %>">
             <h5>
-              <%= anime.attributes.popularityRank %>. <%= anime.attributes.canonicalTitle %>
+              <%= result.attributes.popularityRank %>. <%= result.attributes.canonicalTitle %>
             </h5>
             </form>
-            <a href="/animes/<%= anime.id %>">
+            <a href="/animes/<%= result.id %>">
               <button type="submit" class="btn btn-outline-secondary">Read More</button>
             </a>
           </div>

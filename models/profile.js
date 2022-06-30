@@ -2,6 +2,11 @@ import mongoose from 'mongoose'
 
 const Schema = mongoose.Schema
 
+const reviewSchema = new mongoose.Schema({
+  content: String,
+}, {
+  timestamps: true,
+})
 
 const profileSchema = new mongoose.Schema({
   name: String,
@@ -10,7 +15,7 @@ const profileSchema = new mongoose.Schema({
   location: String,
   favoriteAnime: String,
   anime: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Anime' }],
-
+  reviews: [reviewSchema],
 }, {
   timestamps: true
 })
