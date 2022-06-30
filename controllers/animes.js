@@ -34,13 +34,15 @@ function animeSearch(req, res) {
 function show(req,res){
   axios.get(`https://kitsu.io/api/edge/anime/${req.params.id}`)
   .then(response =>{
-    Anime.findOne({ animeId: response.data.id})
+    Anime.find({})
     .then((anime =>{
+      anime.push(response.data)
+      // anime.save()
+      console.log("**********Anime",anime)
       res.render("animes/show",{
         title: "Leave A comment",
         animeId: response.data,
         anime,
-        
       })
     }))
   })
@@ -65,10 +67,13 @@ function hottestAnime(req,res){
   })
 }
 
+
+
 export{
   animeSearch,
   show,
   index,
   hottestAnime,
+  // newComment
 
 }

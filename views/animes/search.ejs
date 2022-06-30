@@ -1,6 +1,6 @@
 <%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/style2.css">
 <link rel="stylesheet" href="/stylesheets/AllAnime.css">
-
 <%- include('../partials/nav') %>
 
   <main>
@@ -14,18 +14,19 @@
           <div class="card-body">
             <form action="/profiles/addAnime" method="post">
                 <img name="image" src="<%= anime.attributes.posterImage.small%>" class="card-img-top">
-                <h2><%= anime.attributes.canonicalTitle%></h2>
+                <p><strong><%= anime.attributes.canonicalTitle%></strong></p>
                 <input hidden type="text" name="name" id="" value="<%= anime.attributes.canonicalTitle %>">
                 <input hidden type="text" name="start" id="" value="<%= anime.attributes.startDate %>">
                 <input hidden type="text" name="end" id="" value="<%= anime.attributes.endDate %>">
-                <button type="button" class="btn btn-outline-primary">Add Anime</button>
               </form>
-              <a href="/animes/<%= anime.id %>">
+              <form action="/animes/new" method="get">
+                <button type="button" class="btn btn-outline-primary">Add Anime</button>
                 <button type="button" class="btn btn-outline-secondary">Leave a comment</button>
-              </a>
-            </div>
+              </form>
+            </a>
           </div>
-      <% }) %>
-  </main>
+        </div>
+        <% }) %>
+      </main>
 
 <%- include('../partials/footer') %>

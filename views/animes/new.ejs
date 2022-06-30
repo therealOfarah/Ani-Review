@@ -1,15 +1,14 @@
 <%- include('../partials/html-head') %>
 <link rel="stylesheet" href="/stylesheets/style2.css">
-<link rel="stylesheet" href="/public/stylesheets/show.css">
 <%- include('../partials/nav') %>
 
 <main>
-<img src ="<%=animeId.data.attributes.posterImage.small%>"><br>
-<p><strong><%=animeId.data.attributes.canonicalTitle%></strong> <br> <%=animeId.data.attributes.description%></p>
-<form id="add-review-form" action="/reviews/<%= anime.id %>?_method=PUT" method="POST">
+<img src ="<%=animeId.data.attributes.posterImage.medium%>">
+<h2><%=animeId.data.attributes.canonicalTitle%></h2>
+<h4><%=animeId.data.attributes.description%></h4>
+<form id="add-review-form" action="/animes/<%= animeId.id %>"method="POST">
     <label for="content-textarea">Review:</label>
-    <textarea name="content" id="content-textarea" placeholder="Type Here"requried>
-    </textarea>
+    <textarea name="content" id="content-textarea" requried></textarea>
     <label for="rating-select">Rating:</label>
     <select name="rating" id="rating-select">
       <option value="1">1</option>
@@ -20,6 +19,7 @@
     </select>
     <button type="submit" class="btn btn-outline-primary">Add Review</button>
   </form>
+
 </main>
 
 <%- include('../partials/footer') %>

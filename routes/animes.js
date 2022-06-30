@@ -7,10 +7,7 @@ router.get('/',animeCtrl.index)
 router.get('/search',animeCtrl.animeSearch)
 router.get('/hottestanime',animeCtrl.hottestAnime)
 router.get('/:id',animeCtrl.show)
-// router.patch('/games/:id/addToCollection')
-// router.patch('/games/:id/removeFromCollection')
-// router.get('/new',isLoggedIn,animeCtrl.new)
-// router.post('/:id',isLoggedIn,animeCtrl.addReview)
+// router.get("/new",animeCtrl.newComment)
 export {
   router
 }

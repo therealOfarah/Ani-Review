@@ -8,9 +8,7 @@ const animeSchema = new Schema({
   start: String,
   end: String,
   ageRating: String,
-  animeId:Number,
   reviews:[{ type: mongoose.Schema.Types.ObjectId, ref: 'Review' }],
-  collected:[{ type: mongoose.Schema.Types.ObjectId, ref: 'Profile' }]
   
 })
 

@@ -6,24 +6,16 @@ main {
 
 }
 
-@media only screen and (max-width: 600px) {
-  main {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 5px;
-    row-gap: 5px;
-    margin-left: 1%;
-  }
-}
+
 @media (prefers-color-scheme: dark) {
-    main{
+    body{
     color: black;
     background: lightgrey;
   }
 
 }
 @media (prefers-color-scheme: light) {
-  main{
+  body{
   color: black;
   background: lightblue;
 }

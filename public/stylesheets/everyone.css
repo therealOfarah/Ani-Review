@@ -1,8 +1,6 @@
-main {
-  display: flex;
+main  .cardContainer{
   /* grid-template-rows: repeat(2, 0fr);
-  column-gap: 25px;
-  row-gap: 5px;
-  margin: auto; */
-  flex-direction: column-reverse;
+  column-gap: 105px;
+  row-gap: 105px; */
+  background-color: grey;
 }
