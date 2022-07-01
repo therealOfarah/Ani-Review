@@ -16,35 +16,25 @@
 
   }
 } */
-
-@media (prefers-color-scheme: dark) {
+html{
+  background-image: url("../images/4357971.webp");
+  background-image: cover;
+}
+main{
+  background-image: url("../images/4357971.webp");
+  background-image: cover;
+}
+/* @media (prefers-color-scheme: dark) {
   main {
     background: darkgrey;
     color: black
   }
 
 
-}
+} */
 
 @media (prefers-color-scheme: light) {
   main {
-    background: lightgrey;
-    color: black;
-
-  }
-
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    background: darkgrey;
-    color: black
-  }
-
-}
-
-@media (prefers-color-scheme: light) {
-  html {
     background: lightgrey;
     color: black;
 
@@ -53,32 +43,18 @@
 }
 
 /* @media (prefers-color-scheme: dark) {
-  main {
-    color: black;
-    background: lightgrey;
-  }
-
-}
-
-@media (prefers-color-scheme: light) {
-  main {
-    color: black;
-    background: lightblue;
-  }
-
-}
-@media (prefers-color-scheme: dark) {
-  html{
-    color: black;
-    background: lightgrey;
-  }
-
-}
-
-@media (prefers-color-scheme: light) {
   html {
-    color: black;
-    background: lightblue;
+    background: darkgrey;
+    color: black
   }
 
 } */
+
+@media (prefers-color-scheme: light) {
+  html {
+    background: lightgrey;
+    color: black;
+
+  }
+
+}
