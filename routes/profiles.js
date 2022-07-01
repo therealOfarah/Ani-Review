@@ -7,10 +7,10 @@ router.get('/', profileCrtl.index)
 router.get('/:id', profileCrtl.show)
 router.get('/:id/edit', isLoggedIn, profileCrtl.edit)
 router.put('/:id', isLoggedIn, profileCrtl.update)
-router.post('/addAnime', profileCrtl.addAnime)
+// router.post('/addAnime', profileCrtl.addAnime)
 router.post("/:id/reviews",profileCrtl.create)
 // router.post("/:id/reviews",profileCrtl.createReview)
-router.delete('/:id', profileCrtl.delete)
+router.delete('/:id/reviews/:reviewId', profileCrtl.delete)
 export {
   router
 }

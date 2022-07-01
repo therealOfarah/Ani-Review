@@ -30,15 +30,34 @@ function animeSearch(req, res) {
       res.redirect(`/`)
     })
 }
-function create(req, res) {
+// function create(req, res) {
+//   axios.get(`https://kitsu.io/api/edge/anime/${req.params.id}`)
+//     .then(response => {
+//       Anime.create(response.data)
+//         .then(anime => {
+//           anime.push(response.data)
+//           // anime.save()
+//           console.log("***********", anime)
+//           res.redirect(`/animes/${anime._id}`)
+//         })
+//     })
+//     .catch(err => {
+//       console.log(err)
+//       res.redirect(`/`)
+//     })
+// }
+
+function show(req, res) {
   axios.get(`https://kitsu.io/api/edge/anime/${req.params.id}`)
     .then(response => {
-      Anime.create(response.data)
+      Anime.find({})
         .then(anime => {
-          anime.push(response.data)
-          // anime.save()
-          console.log("***********", anime)
-          res.redirect(`/animes/${anime._id}`)
+          console.log("**********Anime",anime)
+          res.render("animes/show", {
+            title: "Leave A comment",
+            results: response.data,
+            anime,
+          })
         })
     })
     .catch(err => {
@@ -46,27 +65,6 @@ function create(req, res) {
       res.redirect(`/`)
     })
 }
-
-// function show(req, res) {
-//   axios.get(`https://kitsu.io/api/edge/anime/${req.params.id}`)
-//     .then(response => {
-//       Anime.find({})
-//         .then((anime => {
-//           anime.push(response.data)
-//           // anime.save()
-//           console.log("**********Anime",anime)
-//           res.render("animes/show", {
-//             title: "Leave A comment",
-//             results: response.data,
-//             anime,
-//           })
-//         }))
-//     })
-//     .catch(err => {
-//       console.log(err)
-//       res.redirect(`/`)
-//     })
-// }
 
 
 function hottestAnime(req, res) {
@@ -87,10 +85,10 @@ function hottestAnime(req, res) {
 
 export {
   animeSearch,
-  // show,
+  show,
   index,
   hottestAnime,
-  create
+  // create
   // newComment
 
 }

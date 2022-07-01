@@ -1,5 +1,6 @@
 <%- include('../partials/html-head') %>
   <link rel="stylesheet" href="/stylesheets/everyone.css">
+    <link rel="stylesheet" href="/public/stylesheets/profile.css">
   <link id="favicon" rel="icon" href="/favicon/favicon (1).ico" type="image">
   <%- include('../partials/nav') %>
 
@@ -29,7 +30,7 @@
       </div>
       <h2>
       <form id="add-review-form" action="/profiles/<%= profile._id %>/reviews" method="POST">
-        <label for="content-textarea">Review:</label>
+        <label for="content-textarea"></label>
         <textarea name="content" id="content-textarea" requried></textarea>
         <button type="submit" class="btn btn-outline-primary">Add Review</button>
       </form>
@@ -44,7 +45,7 @@
               <% profile.reviews.forEach(review => { %>
                 <tr>
                   <td><%= review.content %></td>
-                  <td><form action="/profiles/<%= profile._id %>?_method=DELETE" method="POST">
+                  <td><form action="/profiles/<%= profile._id %>/reviews/<%= review._id %>?_method=DELETE" method="POST">
                     <button>X</button>
                   </td>
                 </tr>

@@ -8,8 +8,8 @@
       <img src="<%=results.data.attributes.posterImage.small%>"><br>
       <p class="description"><strong><%=results.data.attributes.canonicalTitle%></strong><br><%=results.data.attributes.description%></p>
 
-      <!-- <form id="add-review-form" action="/reviews/<%#anime.id %>?_method=PUT" method="POST"> -->
-        <!-- <label for="content-textarea">Review:</label>
+      <form id="add-review-form" action="/reviews/<%=anime.id %>?_method=PUT" method="POST"> 
+        <label for="content-textarea">Review:</label>
     <textarea name="content" id="content-textarea" placeholder="Type Here"requried>
     </textarea>
     <label for="rating-select">Rating:</label>
@@ -20,8 +20,9 @@
       <option value="4">4</option>
       <option value="5" selected>5</option>
     </select>
-    <button type="submit" class="btn btn-outline-primary">Add Review</button> -->
+    <button type="submit" class="btn btn-outline-primary">Add Review</button>
       </form>
+      <button type="submit"> Add</button>
     </main>
 
     <%- include('../partials/footer') %>

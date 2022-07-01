@@ -64,9 +64,15 @@ function update(req, res) {
 }
 
 function deleteReview(req, res) {
-  Profile.findByIdAndDelete(req.profile.review.id)
-    .then(() => {
-      res.redirect('/profiles')
+  Profile.findById(req.params.id)
+  .then(profile => {
+    console.log("**********")
+    console.log("*********profile",req.params.reviewId)
+    profile.reviews.remove({_id: req.params.reviewId})
+      profile.save()
+      .then(()=>{
+        res.redirect(`/profiles/${profile._id}`)
+      })
     })
     .catch(err => {
       console.log(err)
@@ -96,7 +102,7 @@ export {
   edit,
   update,
   index,
-  addAnime,
+  // addAnime,
   deleteReview as delete,
   create
 }

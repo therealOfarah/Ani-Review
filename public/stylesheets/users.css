@@ -1,29 +1,50 @@
-/* main section{
-  display: flex;
-  /* justify-content: center;
-  text-align: center;
-  align-items: center;
-  flex-direction: column; */
 
 
-/* } */
-/* @media only screen and (min-width: 600px)and (max-width:1000px) {
-  main {
+@media only screen and (max-width: 400px) {
+  main .cardContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 0fr);
+    column-gap: 3px;
+    row-gap: 5px;
+    padding-left: 1%;
+
+  }
+}
+
+@media only screen and (min-width: 400px)and (max-width:600px) {
+  main .cardContainer{
+    display: grid;
+    grid-template-columns: repeat(2, 0fr);
+    column-gap: 1px;
+    row-gap: 1px;
+
+  }
+}
+
+@media only screen and (min-width: 600px)and (max-width:1000px) {
+  main .cardContainer{
     display: grid;
     grid-template-columns: repeat(4, 0fr);
     column-gap: 10px;
     row-gap: 1px;
 
   }
-} */
+}
+@media only screen and (min-width: 1000px)and (max-width:1800px) {
+  main  .cardContainer{
+    display: grid;
+    grid-template-columns: repeat(4, 0fr);
+    column-gap: 10px;
+    row-gap: 1px;
 
+  }
+}
 @media (prefers-color-scheme: dark) {
   main {
     background: rgb(131,58,180);
     background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
     color: white;
   }
-  
 
 }
 
@@ -31,8 +52,6 @@
   main{
     background: rgb(238,174,202);
     background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
-    color: white;
-
   }
 
 }
@@ -40,8 +59,6 @@
   html {
     background: rgb(131,58,180);
     background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
-    color: white;
-
   }
 
 }
@@ -50,39 +67,6 @@
   html{
     background: rgb(238,174,202);
     background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
-    color: white;
-
   }
 
 }
-
-/* @media (prefers-color-scheme: dark) {
-  main {
-    color: black;
-    background: lightgrey;
-  }
-
-}
-
-@media (prefers-color-scheme: light) {
-  main {
-    color: black;
-    background: lightblue;
-  }
-
-}
-@media (prefers-color-scheme: dark) {
-  html{
-    color: black;
-    background: lightgrey;
-  }
-
-}
-
-@media (prefers-color-scheme: light) {
-  html {
-    color: black;
-    background: lightblue;
-  }
-
-} */
