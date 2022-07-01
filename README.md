@@ -13,7 +13,7 @@ WireFrames - https://whimsical.com/ani-review-7hP4p7qTDCRBMThoiVkzGG
 ![alt text](../Ani-Review/public/screenshots/Screen%20Shot%202022-06-30%20at%208.44.35%20PM.png)
 ![alt text](../Ani-Review/public/screenshots/Screen%20Shot%202022-06-30%20at%208.44.22%20PM.png)
 ![alt text](../Ani-Review/public/screenshots/Screen%20Shot%202022-06-30%20at%208.44.14%20PM.png)
-![alt text](../Ani-Review/public/screenshots/Screen%20Shot%202022-06-30%20at%208.44.07%20PM.png)
+![](../Ani-Review/public/screenshots/Screen%20Shot%202022-06-30%20at%208.44.07%20PM.png)
 # Languages
 
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
@@ -31,8 +31,8 @@ WireFrames - https://whimsical.com/ani-review-7hP4p7qTDCRBMThoiVkzGG
 # Tools
 ![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
 
-# Special Thanks
-API - https://kitsu.docs.apiary.io/#reference/anime/anime/fetch-collection?console=1
+# API
+https://kitsu.docs.apiary.io/#reference/anime/anime/fetch-collection?console=1
 
 
 # ICEBOX 🧊
