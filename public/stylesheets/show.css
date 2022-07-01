@@ -5,7 +5,10 @@ body {
 main .description {
   border: 5px solid black;
   border-radius: 5px;
+  font-size: 20px;
+  background-color: azure;
 }
+
 #add-review-form {
   display: grid;
   grid-template-columns: auto auto;
@@ -25,31 +28,34 @@ main .description {
 }
 @media (prefers-color-scheme: dark) {
   main {
-    background: rgb(131,58,180);
-    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    background: darkgrey;
+    color: black;
+
   }
+
 
 }
 
 @media (prefers-color-scheme: light) {
-  main{
-    background: rgb(238,174,202);
-    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+  main {
+    background: lightgrey;
+    color: black;
   }
 
 }
+
 @media (prefers-color-scheme: dark) {
   html {
-    background: rgb(131,58,180);
-    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    background: darkgrey;
+    color: black
   }
 
 }
 
 @media (prefers-color-scheme: light) {
-  html{
-    background: rgb(238,174,202);
-    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+  html {
+    background: lightgrey;
+    color: black;
   }
 
 }
@@ -115,19 +121,5 @@ main .description {
     width: 160px;
     grid-column: 2 / 3;
     margin-bottom: 24px;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  html {
-    color: black;
-    background: lightgrey;
-  }
-
-}
-
-@media (prefers-color-scheme: light) {
-  html {
-    color: black;
-    background: lightblue;
   }
 }

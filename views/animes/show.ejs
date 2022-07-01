@@ -1,6 +1,6 @@
 <%- include('../partials/html-head') %>
   <link rel="stylesheet" href="/stylesheets/show.css">
-  <link rel="stylesheet" href="/stylesheets/style2.css">
+  <!-- <link rel="stylesheet" href="/stylesheets/style2.css"> -->
   <link id="favicon" rel="icon" href="/favicon/favicon (1).ico" type="image">
   <%- include('../partials/nav') %>
 
@@ -12,7 +12,7 @@
         <%=results.data.attributes.description%>
       </p>
 
-      <form id="add-review-form" action="/reviews/<%=anime.id %>?_method=PUT" method="POST">
+      <!-- <form id="add-review-form" action="/reviews/<%=anime.id %>?_method=PUT" method="POST">
         <label for="content-textarea">Review:</label>
         <textarea name="content" id="content-textarea" placeholder="Type Here" requried>
     </textarea>
@@ -26,7 +26,7 @@
         </select>
         <button type="submit" class="btn btn-outline-primary">Add Review</button>
       </form>
-      <button type="submit"> Add</button>
+      <button type="submit"> Add</button> -->
     </main>
 
     <%- include('../partials/footer') %>
