@@ -14,8 +14,8 @@ main form {
 
 @media (prefers-color-scheme: light) {
   main {
-    background: lightgrey;
-    color: black
+    background: lightblue;
+    color: black;
   }
 
 }
@@ -30,8 +30,8 @@ main form {
 
 @media (prefers-color-scheme: light) {
   html {
-    background: lightgrey;
-    color: black
+    background: lightblue;
+    color: black;
   }
 
 }

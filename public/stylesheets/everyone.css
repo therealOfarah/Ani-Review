@@ -86,8 +86,8 @@ table td {
 
   @media (prefers-color-scheme: light) {
     main {
-      background: lightgrey;
-      color: black
+      background: lightblue;
+      color: black;
     }
 
   }
@@ -102,8 +102,8 @@ table td {
 
   @media (prefers-color-scheme: light) {
     html {
-      background: lightgrey;
-      color: black
+      background: lightblue;
+      color: black;
     }
 
   }

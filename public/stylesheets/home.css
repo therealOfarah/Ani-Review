@@ -16,43 +16,43 @@
 
   }
 } */
-html{
+/* html{
   background-image: url("../images/4357971.webp");
   background-image: cover;
 }
 main{
   background-image: url("../images/4357971.webp");
-  background-image: cover;
-}
-/* @media (prefers-color-scheme: dark) {
+  background-image: cover; */
+/* } */
+@media (prefers-color-scheme: dark) {
   main {
     background: darkgrey;
     color: black
   }
 
 
-} */
+}
 
 @media (prefers-color-scheme: light) {
   main {
-    background: lightgrey;
+    background: lightblue;
     color: black;
 
   }
 
 }
 
-/* @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
   html {
     background: darkgrey;
     color: black
   }
 
-} */
+}
 
 @media (prefers-color-scheme: light) {
   html {
-    background: lightgrey;
+    background: lightblue;
     color: black;
 
   }

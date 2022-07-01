@@ -38,7 +38,7 @@ main .description {
 
 @media (prefers-color-scheme: light) {
   main {
-    background: lightgrey;
+    background: lightblue;
     color: black;
   }
 
@@ -54,7 +54,7 @@ main .description {
 
 @media (prefers-color-scheme: light) {
   html {
-    background: lightgrey;
+    background: lightblue;
     color: black;
   }
 

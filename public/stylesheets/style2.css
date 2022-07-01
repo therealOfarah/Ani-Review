@@ -41,7 +41,7 @@
 
 @media (prefers-color-scheme: light) {
   main {
-    background: lightgrey;
+    background: lightblue;
     color: black;
   }
 
@@ -57,7 +57,7 @@
 
 @media (prefers-color-scheme: light) {
   html {
-    background: lightgrey;
+    background: lightblue;
     color: black;
   }
 
