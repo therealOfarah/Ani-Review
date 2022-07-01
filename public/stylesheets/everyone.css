@@ -53,16 +53,17 @@
   margin-bottom: 20px;
 }
 
-#add-review-form > textarea {
+#add-review-form>textarea {
   width: 250px;
 }
 
-#add-review-form > button {
+#add-review-form>button {
   font-size: 16px;
   width: 160px;
   grid-column: 2 / 3;
   margin-bottom: 24px;
 }
+
 table {
   font-size: 20px;
 }
@@ -79,47 +80,48 @@ table td {
 
 @media (prefers-color-scheme: dark) {
   main {
-    background: rgb(131,58,180);
-    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    background: darkgrey;
+    color: black
   }
 
-}
-
-@media (prefers-color-scheme: light) {
-  main{
-    background: rgb(238,174,202);
-    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
-  }
-
-}
-@media (prefers-color-scheme: dark) {
-  html {
-    background: rgb(131,58,180);
-    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
-  }
-
-}
-
-@media (prefers-color-scheme: light) {
-  html{
-    background: rgb(238,174,202);
-    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
-  }
-
-}
-@media only screen and (min-width: 200px)and (max-width:600px) {
-  main .cardContainer{
-    display: grid;
-    grid-template-columns: repeat(2, 0fr);
-    column-gap: 10px;
-    row-gap: 5px;
+  @media (prefers-color-scheme: light) {
+    main {
+      background: lightgrey;
+      color: black
+    }
 
   }
 
-  /* #add-review-form>button {
+  @media (prefers-color-scheme: dark) {
+    html {
+      background: darkgrey;
+      color: black
+    }
+
+  }
+
+  @media (prefers-color-scheme: light) {
+    html {
+      background: lightgrey;
+      color: black
+    }
+
+  }
+
+  @media only screen and (min-width: 200px)and (max-width:600px) {
+    main .cardContainer {
+      display: grid;
+      grid-template-columns: repeat(2, 0fr);
+      column-gap: 10px;
+      row-gap: 5px;
+
+    }
+
+    /* #add-review-form>button {
     font-size: 16px;
     width: 160px;
     grid-column: 2 / 3;
     margin-bottom: 24px;
   } */
+  }
 }

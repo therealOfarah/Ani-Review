@@ -1,62 +1,65 @@
 <%- include('../partials/html-head') %>
   <link rel="stylesheet" href="/stylesheets/everyone.css">
-    <link rel="stylesheet" href="/public/stylesheets/profile.css">
+  <link rel="stylesheet" href="/public/stylesheets/profile.css">
   <link id="favicon" rel="icon" href="/favicon/favicon (1).ico" type="image">
   <%- include('../partials/nav') %>
 
     <main>
       <div class="cardContainer">
-      <div>
-        <div class="card" style="width: 18rem;">
-          <img src="<%=profile.avatar %>" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h3 class="card-title">
-              <%= profile.name %>
-            </h3>
-            <h5 class="card-title">
-              <%= profile.location%>
-            </h5>
-            <h5 class="card-title">
-              <%= profile.favoriteAnime%>
-            </h5>
-            <a href="/profiles" class="btn btn-primary">Everyone</a>
-            <% if (user?.profile.avatar) { %>
-              <form action="/profiles/<%= profile._id %>/edit" method="get">
-                <a href="/profiles/<%= profile._id %>/edit" class="btn btn-primary">Edit</a>
-              </form>
-              <% } %>
+        <div>
+          <div class="card" style="width: 18rem;">
+            <img src="<%=profile.avatar %>" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h3 class="card-title">
+                <%= profile.name %>
+              </h3>
+              <h5 class="card-title">
+                <%= profile.location%>
+              </h5>
+              <h5 class="card-title">
+                <%= profile.favoriteAnime%>
+              </h5>
+              <a href="/profiles" class="btn btn-primary">Everyone</a>
+              <% if (user?.profile.avatar) { %>
+                <form action="/profiles/<%= profile._id %>/edit" method="get">
+                  <a href="/profiles/<%= profile._id %>/edit" class="btn btn-primary">Edit</a>
+                </form>
+                <% } %>
+            </div>
           </div>
         </div>
-      </div>
-      <h2>
-      <form id="add-review-form" action="/profiles/<%= profile._id %>/reviews" method="POST">
-        <label for="content-textarea"></label>
-        <textarea name="content" id="content-textarea" requried></textarea>
-        <button type="submit" class="btn btn-outline-primary">Add Review</button>
-      </form>
-      <% if ( profile.reviews.length) { %>
-        <table>
-          <thead>
-            <tr>
-              <th>User Review</th>
-              <th>Delete Review</th>
-            </tr>
-          </thead>
-              <% profile.reviews.forEach(review => { %>
+        <h2>
+          <form id="add-review-form" action="/profiles/<%= profile._id %>/reviews" method="POST">
+            <label for="content-textarea"></label>
+            <textarea name="content" id="content-textarea" requried></textarea>
+            <button type="submit" class="btn btn-outline-primary">Add Review</button>
+          </form>
+          <% if ( profile.reviews.length) { %>
+            <table>
+              <thead>
                 <tr>
-                  <td><%= review.content %></td>
-                  <td><form action="/profiles/<%= profile._id %>/reviews/<%= review._id %>?_method=DELETE" method="POST">
-                    <button>X</button>
+                  <th>User Review</th>
+                  <th>Delete Review</th>
+                </tr>
+              </thead>
+              <% profile.reviews.forEach(review=> { %>
+                <tr>
+                  <td>
+                    <%= review.content %>
+                  </td>
+                  <td>
+                    <form action="/profiles/<%= profile._id %>/reviews/<%= review._id %>?_method=DELETE" method="POST">
+                      <button>X</button>
                   </td>
                 </tr>
                 <% }) %>
-            <tr>
-              <td colspan="2"></td>
-            </tr>
-          </tbody>
-        </table>
-      <% } else { %>
-        <h3>No Reviews Yet</h3>
-      <% } %>
+                  <tr>
+                    <td colspan="2"></td>
+                  </tr>
+                  </tbody>
+            </table>
+            <% } else { %>
+              <h3>No Reviews Yet</h3>
+              <% } %>
     </main>
     <%- include('../partials/footer') %>

@@ -18,8 +18,8 @@ main {
 
 @media (prefers-color-scheme: dark) {
   html {
-    color: black;
-    background: lightgrey;
+    background: darkgrey;
+    color: black
   }
 
 }

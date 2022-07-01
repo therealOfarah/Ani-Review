@@ -5,6 +5,7 @@ main {
   row-gap: 5px;
 
 }
+
 @media only screen and (max-width: 400px) {
   main {
     display: grid;
@@ -38,31 +39,32 @@ main {
 
 @media (prefers-color-scheme: dark) {
   main {
-    background: rgb(131,58,180);
-    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    background: darkgrey;
+    color: black
   }
 
 }
 
 @media (prefers-color-scheme: light) {
-  main{
-    background: rgb(238,174,202);
-    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+  main {
+    background: lightgrey;
+    color: black
   }
 
 }
+
 @media (prefers-color-scheme: dark) {
   html {
-    background: rgb(131,58,180);
-    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    background: darkgrey;
+    color: black
   }
 
 }
 
 @media (prefers-color-scheme: light) {
-  html{
-    background: rgb(238,174,202);
-    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+  html {
+    background: lightgrey;
+    color: black
   }
 
 }
