@@ -14,10 +14,11 @@
                 <%= profile.name %>
               </h3>
               <h5 class="card-title">
+                <p>Location:</p>
                 <%= profile.location%>
-              </h5>
+              </h5><br>
               <h5 class="card-title">
-                <%= profile.favoriteAnime%>
+                <p>Favorite Anime:</p><%= profile.favoriteAnime%>
               </h5>
               <a href="/profiles" class="btn btn-primary">Everyone</a>
               <% if (user?.profile.avatar) { %>
