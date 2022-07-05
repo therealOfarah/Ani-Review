@@ -9,11 +9,11 @@ Ani-Review - https://omarsanireview1.herokuapp.com/
 WireFrames - https://whimsical.com/ani-review-7hP4p7qTDCRBMThoiVkzGG
 
 # Pictures
-![](../Ani-Review/public/screenshots/Screen%20Shot%202022-06-30%20at%208.43.59%20PM.png)
-![](../Ani-Review/public/screenshots/Screen%20Shot%202022-06-30%20at%208.44.35%20PM.png)
-![](../Ani-Review/public/screenshots/Screen%20Shot%202022-06-30%20at%208.44.22%20PM.png)
-![](../Ani-Review/public/screenshots/Screen%20Shot%202022-06-30%20at%208.44.14%20PM.png)
-![](../Ani-Review/public/screenshots/Screen%20Shot%202022-06-30%20at%208.44.07%20PM.png)
+![](public/screenshots/Screen%20Shot%202022-06-30%20at%208.43.59%20PM.png)
+![](public/screenshots/Screen%20Shot%202022-06-30%20at%208.44.07%20PM.png)
+![](public/screenshots/Screen%20Shot%202022-06-30%20at%208.44.14%20PM.png)
+![](public/screenshots/Screen%20Shot%202022-06-30%20at%208.44.22%20PM.png)
+![](public/screenshots/Screen%20Shot%202022-06-30%20at%208.44.35%20PM.png)
 # Languages
 
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
