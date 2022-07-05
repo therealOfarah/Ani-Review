@@ -1,27 +1,25 @@
 <%- include('../partials/html-head') %>
-  <link rel="stylesheet" href="/stylesheets/users.css">
-  <link id="favicon" rel="icon" href="/favicon/favicon (1).ico" type="image">
-  <%- include('../partials/nav') %>
+<link rel="stylesheet" href="/stylesheets/users.css">
+<link id="favicon" rel="icon" href="/favicon/favicon (1).ico" type="image">
+<%- include('../partials/nav') %>
 
-    <main>
-      <div class="cardContainer">
-        <% profiles.forEach(profile=> { %>
-          <a class="text-decoration-none" href="/profiles/<%= profile._id %>">
-            <div class="card">
-              <% if (profile.avatar) { %>
-                <img src="<%= profile.avatar %>" alt="<%= profile.name %>'s avatar">
-                <% } else { %>
-                  <img src="https://picsum.photos/96" alt="A placeholder avatar">
-                  <% } %>
-                    <div class="card-body">
-                      <h1 class="card-title">
-                        <%= profile.name %>
-                      </h1>
-                    </div>
-            </div>
-          </a>
-          <% }) %>
+<main>
+<div class="cardContainer">
+  <% profiles.forEach(profile=> { %>
+    <a class="text-decoration-none" href="/profiles/<%= profile._id %>">
+      <div class="card">
+        <% if (profile.avatar) { %>
+          <img src="<%= profile.avatar %>" alt="<%= profile.name %>'s avatar">
+        <% } else { %>
+          <img src="https://picsum.photos/96" alt="A placeholder avatar">
+        <% } %>
+        <div class="card-body">
+          <h1 class="card-title"><%= profile.name %></h1>
+        </div>
       </div>
-    </main>
+    </a>
+    <% }) %>
+</div>
+</main>
 
-    <%- include('../partials/footer') %>
+<%- include('../partials/footer') %>

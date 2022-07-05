@@ -9,10 +9,10 @@ Ani-Review - https://omarsanireview1.herokuapp.com/
 WireFrames - https://whimsical.com/ani-review-7hP4p7qTDCRBMThoiVkzGG
 
 # Pictures
-![alt text](../Ani-Review/public/screenshots/Screen%20Shot%202022-06-30%20at%208.43.59%20PM.png)
-![alt text](../Ani-Review/public/screenshots/Screen%20Shot%202022-06-30%20at%208.44.35%20PM.png)
-![alt text](../Ani-Review/public/screenshots/Screen%20Shot%202022-06-30%20at%208.44.22%20PM.png)
-![alt text](../Ani-Review/public/screenshots/Screen%20Shot%202022-06-30%20at%208.44.14%20PM.png)
+![](../Ani-Review/public/screenshots/Screen%20Shot%202022-06-30%20at%208.43.59%20PM.png)
+![](../Ani-Review/public/screenshots/Screen%20Shot%202022-06-30%20at%208.44.35%20PM.png)
+![](../Ani-Review/public/screenshots/Screen%20Shot%202022-06-30%20at%208.44.22%20PM.png)
+![](../Ani-Review/public/screenshots/Screen%20Shot%202022-06-30%20at%208.44.14%20PM.png)
 ![](../Ani-Review/public/screenshots/Screen%20Shot%202022-06-30%20at%208.44.07%20PM.png)
 # Languages
 

@@ -1,29 +1,30 @@
 <%- include('../partials/html-head') %>
-  <link rel="stylesheet" href="/stylesheets/edit.css">
-  <link id="favicon" rel="icon" href="/favicon/favicon (1).ico" type="image">
-  <%- include('../partials/nav') %>
-    <main>
-      <% if (user?.profile.avatar) { %>
-        <div>
-          <img src="<%=profile.avatar %>" alt="<%= profile.name %> avatar" />
-        </div>
-        <% } %>
-          <h1>
-            <%=profile.name%>
-          </h1>
-          <form action="/profiles/<%= profile._id %>?_method=PUT" method="POST">
-            <label>
-              Favorite Anime:
-              <input type="text" name="favoriteAnime" value="<%= profile.favoriteAnime %>">
-            </label>
-            <label>
-              About Me:
-              <input type="text" name="aboutMe" value="<%= profile.aboutMe %>">
-            </label>
-            <label>
-              Location:
-              <input type="text" name="location" value="<%= profile.location %>">
-            </label>
-            <button type="submit" class="btn btn-outline-secondary">Save</button>
-          </form>
-    </main>
+<link rel="stylesheet" href="/stylesheets/edit.css">
+<link id="favicon" rel="icon" href="/favicon/favicon (1).ico" type="image">
+<%- include('../partials/nav') %>
+  <main>
+  <% if (user?.profile.avatar) { %>
+  <div>
+    <img src="<%=profile.avatar %>" alt="<%= profile.name %> avatar" />
+  </div>
+  <% } %>
+    <h1>
+      <%=profile.name%>
+    </h1>
+    <form action="/profiles/<%= profile._id %>?_method=PUT" method="POST">
+      <label>
+        Favorite Anime:
+        <input type="text" name="favoriteAnime" value="<%= profile.favoriteAnime %>">
+      </label>
+      <label>
+        About Me:
+        <input type="text" name="aboutMe" value="<%= profile.aboutMe %>">
+      </label>
+      <label>
+        Location:
+        <input type="text" name="location" value="<%= profile.location %>">
+      </label>
+      <button type="submit" class="btn btn-outline-secondary">Save</button>
+    </form>
+  </main>
+<%- include('./partials/footer') %>
