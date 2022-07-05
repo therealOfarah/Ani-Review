@@ -66,13 +66,16 @@ function update(req, res) {
 function deleteReview(req, res) {
   Profile.findById(req.params.id)
   .then(profile => {
-    console.log("**********")
-    console.log("*********profile",req.params.reviewId)
-    profile.reviews.remove({_id: req.params.reviewId})
-      profile.save()
-      .then(()=>{
-        res.redirect(`/profiles/${profile._id}`)
-      })
+    if 
+      (profile.owner.equals(req.user.profile._id)){
+        profile.reviews.remove({_id: req.params.reviewId})
+        profile.save()
+        .then(()=>{
+          res.redirect(`/profiles/${profile._id}`)
+        })
+      } else {
+        throw new Error ('NOT AUTHORIZED')
+      }
     })
     .catch(err => {
       console.log(err)
@@ -85,7 +88,6 @@ function create(req, res) {
   Profile.findById(req.params.id)
     .then(profile => {
       profile.reviews.push(req.body)
-      console.log("******", profile.reviews)
       profile.save()
         .then(() => {
           res.redirect(`/profiles/${profile._id}`)
@@ -102,7 +104,6 @@ export {
   edit,
   update,
   index,
-  // addAnime,
   deleteReview as delete,
   create
 }

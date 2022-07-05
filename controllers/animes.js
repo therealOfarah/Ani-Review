@@ -30,22 +30,6 @@ function animeSearch(req, res) {
       res.redirect(`/`)
     })
 }
-// function create(req, res) {
-//   axios.get(`https://kitsu.io/api/edge/anime/${req.params.id}`)
-//     .then(response => {
-//       Anime.create(response.data)
-//         .then(anime => {
-//           anime.push(response.data)
-//           // anime.save()
-//           console.log("***********", anime)
-//           res.redirect(`/animes/${anime._id}`)
-//         })
-//     })
-//     .catch(err => {
-//       console.log(err)
-//       res.redirect(`/`)
-//     })
-// }
 
 function show(req, res) {
   axios.get(`https://kitsu.io/api/edge/anime/${req.params.id}`)
@@ -88,7 +72,4 @@ export {
   show,
   index,
   hottestAnime,
-  // create
-  // newComment
-
 }
