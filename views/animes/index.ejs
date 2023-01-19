@@ -1,22 +1,24 @@
 <%- include('../partials/html-head') %>
-<link rel="stylesheet" href="/stylesheets/AllAnime.css">
+<!-- <link rel="stylesheet" href="/stylesheets/AllAnime.css"> -->
 <link rel="stylesheet" href="/stylesheets/style2.css">
 <link id="favicon" rel="icon" href="/favicon/favicon (1).ico" type="image">
 <%- include('../partials/nav') %>
 <main>
-  <% results.data.forEach(result=> { %>
-    <div class="card" style="width: 18rem;">
-      <div class="card-body">
-        <img name="image" src="<%= result.attributes.posterImage.small%>" class="card-img-top">
+  <div class="items">
+    <% results.data.forEach(result=> { %>
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <img name="image" src="<%= result.attributes.posterImage.small%>" class="card-img-top">
           <h4><%=result.attributes.canonicalTitle%></h4>
           <input hidden type="text" name="name" id="" value="<%= result.attributes.canonicalTitle %>">
           <input hidden type="text" name="start" id="" value="<%= result.attributes.startDate %>">
           <input hidden type="text" name="end" id="" value="<%= result.attributes.endDate %>">
-          <a href="/animes/<%= result.id %>">
+          <a href="/anime/<%= result.id %>">
             <button type="submit" class="btn btn-outline-secondary">Read More</button>
           </a>
+        </div>
       </div>
+      <% }) %>
     </div>
-  <% }) %>
 </main>
 <%- include('../partials/footer') %>

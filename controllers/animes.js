@@ -36,9 +36,8 @@ function show(req, res) {
     .then(response => {
       Anime.find({})
         .then(anime => {
-          console.log("**********Anime",anime)
           res.render("animes/show", {
-            title: "Leave A comment",
+            title: `Anime`,
             results: response.data,
             anime,
           })
@@ -55,7 +54,7 @@ function hottestAnime(req, res) {
   axios.get(`https://kitsu.io/api/edge/anime?sort=popularityRank`)
     .then(response => {
       res.render('animes/hottest', {
-        title: "All Anime",
+        title: "Trending",
         results: response.data
       })
     })

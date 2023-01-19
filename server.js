@@ -15,7 +15,6 @@ import('./config/database.js')
 import'./config/passport.js'
 
 // require routes
-import { router as indexRouter } from './routes/index.js'
 import { router as authRouter } from './routes/auth.js'
 import { router as animesRouter } from './routes/animes.js'
 import { router as profilesRouter } from './routes/profiles.js'
@@ -60,10 +59,10 @@ app.use(passport.session())
 app.use(passUserToView)
 
 // router middleware
-app.use('/', indexRouter)
+// app.use('/', indexRouter)
 app.use('/auth', authRouter)
 app.use('/profiles', profilesRouter)
-app.use('/animes', animesRouter)
+app.use('/', animesRouter)
 
 
 

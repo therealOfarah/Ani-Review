@@ -1,5 +1,5 @@
 <%- include('../partials/html-head') %>
-<link rel="stylesheet" href="/stylesheets/style2.css">
+<!-- <link rel="stylesheet" href="/stylesheets/style2.css"> -->
 <link rel="stylesheet" href="/stylesheets/AllAnime.css">
 <link id="favicon" rel="icon" href="/favicon/favicon (1).ico" type="image">
 <%- include('../partials/nav') %>
@@ -9,21 +9,23 @@
       <h2>You searched for <%= search %>
       </h2>
       <% } %>
-      <% results.data.forEach(result=> { %>
-        <div class="card" style="width: 18rem;">
-          <div class="card-body">
-            <img name="image" src="<%= result.attributes.posterImage.small%>" class="card-img-top">
-            <p><strong><%= result.attributes.canonicalTitle%></strong></p>
-            <form id="new-results" action="/animes" method="post">
-              <input hidden type="text" name="name" id="" value="<%= result.attributes.canonicalTitle %>">
-              <input hidden type="text" name="start" id="" value="<%= result.attributes.startDate %>">
-              <input hidden type="text" name="end" id="" value="<%= result.attributes.endDate %>">
-            </form>
-            <a href="/animes/<%= result.id %>">
-              <button type="submit" class="btn btn-outline-secondary">Read More</button>
-            </a>
+      <div class="items">
+        <% results.data.forEach(result=> { %>
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <img name="image" src="<%= result.attributes.posterImage.small%>" class="card-img-top">
+              <p><strong><%= result.attributes.canonicalTitle%></strong></p>
+              <form id="new-results" action="/animes" method="post">
+                <input hidden type="text" name="name" id="" value="<%= result.attributes.canonicalTitle %>">
+                <input hidden type="text" name="start" id="" value="<%= result.attributes.startDate %>">
+                <input hidden type="text" name="end" id="" value="<%= result.attributes.endDate %>">
+              </form>
+              <a href="/anime/<%= result.id %>">
+                <button type="submit" class="btn btn-outline-secondary">Read More</button>
+              </a>
+            </div>
           </div>
+          <% }) %>
         </div>
-        <% }) %>
   </main>
 <%- include('../partials/footer') %>
